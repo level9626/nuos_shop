@@ -7,5 +7,5 @@
       <%= image_tag(product.image_url) %>
       <h3><%= product.title %></h3>
       <%= product.description %>
-      <%= product.price %>
+      <%= number_to_currency(product.price) %>
 <% end %>
