@@ -65,7 +65,7 @@ class LineItemsController < ApplicationController
       @line_item.save!
     end
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Line item was successfully destroyed.' }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end
