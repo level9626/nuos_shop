@@ -9,6 +9,7 @@
     <li><%= item.quantity %> &times;
       <%= item.product.title %>
       <%= number_to_currency(item.total_price) %>
+      <%= button_to 'delete', item, method: :delete %>
     </li>
   <% end %>
 </ul>
