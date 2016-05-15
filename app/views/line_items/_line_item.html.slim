@@ -1,0 +1,9 @@
+- if line_item == @current_item
+  li#current_item
+- else
+  li
+= line_item.quantity
+| ×
+= line_item.product.title
+= number_to_currency(line_item.total_price)
+= button_to 'delete', line_item, method: :delete

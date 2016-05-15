@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'puma'
 gem 'jquery-ui-rails'
+gem 'slim-rails'
 
 gem 'spring', group: :development
 

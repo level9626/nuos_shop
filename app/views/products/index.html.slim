@@ -1,0 +1,22 @@
+h1 Listing products
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th Image url
+      th Price
+      th colspan="3"
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.title
+        td = truncate(strip_tags(product.description), length: 80)
+        td = product.image_url
+        td = number_to_currency(product.price)
+        td = link_to 'Show', product
+        td = link_to 'Edit', edit_product_path(product)
+        td = link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Product', new_product_path

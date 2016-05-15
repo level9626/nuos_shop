@@ -1,0 +1,12 @@
+- unless cart.line_items.empty?
+  h2 Your Cart
+
+  ul == render cart.line_items
+
+  h3 Total
+  = number_to_currency(cart.total_price)
+
+  = button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' }
+
+  = link_to 'Edit', edit_cart_path(cart)
+  = link_to 'Back', carts_path
