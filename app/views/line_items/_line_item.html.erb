@@ -1,4 +1,9 @@
-<li><%= line_item.quantity %> &times;
+<% if line_item == @current_item %>
+  <li id="current_item">
+<% else %>
+  <li>
+<% end %>
+  <%= line_item.quantity %> &times;
   <%= line_item.product.title %>
   <%= number_to_currency(line_item.total_price) %>
   <%= button_to 'delete', line_item, method: :delete %>
