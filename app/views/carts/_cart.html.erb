@@ -1,0 +1,13 @@
+<h2>Your Cart</h2>
+
+<ul>
+  <%= render cart.line_items %>
+</ul>
+
+<h3>Total</h3>
+<%= number_to_currency(cart.total_price) %>
+
+<%= button_to 'Empty Cart', cart, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'Edit', edit_cart_path(cart) %> |
+<%= link_to 'Back', carts_path %>
